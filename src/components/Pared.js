@@ -1,31 +1,39 @@
 import React, {useState} from 'react'
 
-let s, area, auxi, porcetaje, result = 0;
+let a, b, area, auxi, porcetaje, result = 0;
+// let materialBase;
 
-function CubicationPared(materialB,a,b){
-  console.log(a,b);
-  switch (materialB) {
-    case 'Ladrillo':
-      s = 0.0801;
-      break;
-      case 'Bloque':
-        s = 0.0801;
-        break;
-        case 'Piedra Cantera':
-      break;
-    default:
-      break;
-  }
-  area = a * b;
-  auxi = area * s;
-  porcetaje = (auxi * 15) / 100;
-  result = auxi + porcetaje;
+function CubicationPared(){
+  // switch (materialBase) {
+  //   case 'Ladrillo':
+  //     s = 0.0801;
+  //     break;
+  //     case 'Bloque':
+  //       s = 0.0801;
+  //       break;
+  //       case 'Piedra Cantera':
+  //     break;
+  //   default:
+  //     break;
+  // }
+  area = a*b;
+  console.log(area);
+  auxi = Math.ceil(area * 12);
+  console.log(auxi);
+  porcetaje = (auxi * 5 / 100);
+  console.log(porcetaje);
+  result = Math.ceil(auxi + porcetaje);
 }
 
 export default function Pared() {
   const [materialB, setMaterialB] = useState('');
   const [altura, setAltura] = useState(0);
   const [ancho, setAncho] = useState(0);
+  // materialBase = materialB;
+  a = altura;
+  b = ancho;
+  console.log(a);
+  console.log(b);
   return (
     <div>
         <div className='row cont-card'>
