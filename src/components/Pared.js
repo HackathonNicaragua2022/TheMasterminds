@@ -10,6 +10,16 @@ export default class Pared extends Component {
             <h2>Cubicacion de Pared</h2>
           </div>
           <div className='col-md-6 col-sm-12'>
+            <h3>Ingrese Material Base</h3>
+          </div>
+          <div className='col-md-6 col-sm-12'>
+          <select name="tipoC" className="form-select" aria-label="Default select example">
+          <option value="1">Ladrillo</option>
+          <option value="2">Bloque</option>
+          <option value="2">Piedra Cantera</option>
+          </select>
+          </div>
+          <div className='col-md-6 col-sm-12'>
             <h3>Ingrese altura de pared en mt</h3>
           </div>
           <div className='col-md-6 col-sm-12'>

@@ -1,26 +1,37 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import Pared from './Pared';
+import Pilar from './Pilar';
 
 
-export default class cubication extends Component {
-  render() {
-    return (
-      <div className='container mt-5 cont-text'>
+export default function Cubication() {
+  // eslint-disable-next-line no-unused-vars
+  const [opciones, setOpciones] = useState(1);
+
+  const CambiarOp = () =>{
+    console.log(parseInt(opciones))
+    if (opciones === 1) {
+      return <Pared/>
+    }
+    return <Pilar/>
+  }
+
+
+
+  return (
+    <div className='container mt-5 cont-text'>
         <div className='row'>
           <div className='col-md-6 col-sm-12'>
             <h3>Tipo de Contruccion</h3>
           </div>
           <div className='col-md-6 col-sm-12'>
-          <select name="tipoC" class="form-select" aria-label="Default select example">
-          <option value="value1">Pared</option>
-          <option value="value3">Pilar</option>
+          <select name="tipoC" className="form-select" aria-label="Default select example" onChange={ (e) => setOpciones(parseInt(e.target.value))}>
+          <option value="1">Pared</option>
+          <option value="2">Pilar</option>
           </select>
           </div>
         </div>
-        if (true) {
-            <Pared/>
-          }
-      </div>
-    )
-  }
+        <CambiarOp/>
+       </div>
+  )
 }
+
