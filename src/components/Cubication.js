@@ -5,8 +5,10 @@ import Pilar from './Pilar';
 
 export default function Cubication() {
   // eslint-disable-next-line no-unused-vars
+//capturando la opcion con estado para saber el tipo de contrucion
   const [opciones, setOpciones] = useState(1);
 
+//validado opcion
   const CambiarOp = () =>{
     console.log(parseInt(opciones))
     if (opciones === 1) {
