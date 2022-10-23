@@ -32,11 +32,11 @@ export default function Pared() {
   // materialBase = materialB;
   a = altura;
   b = ancho;
-  console.log(a);
-  console.log(b);
+  // console.log(a);
+  // console.log(b);
   return (
     <div>
-        <div className='row cont-card'>
+        <div className='row cont-card animate__animated animate__flipInX'>
           <div className='col-md-12 col-sm-12 cont-title'>
             <h2>Cubicacion de Pared</h2>
           </div>
@@ -66,7 +66,7 @@ export default function Pared() {
           <button className='btn btn-primary' onClick={CubicationPared({materialB,altura,ancho})}>Calcular</button>
           </div>
           </div>
-          <div className='row cont-card'>
+          <div className='row cont-card animate__animated animate__flipInX'>
           <div className='col-md-12 col-sm-12 cont-title'>
             <h2>Resultado</h2>
           </div>
