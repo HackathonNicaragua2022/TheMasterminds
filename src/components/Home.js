@@ -8,14 +8,20 @@ export default class Home extends Component {
       <div className='container cont-home'>
         <div className='row'>
           <div className='col-md-7 col-sm-12 animate__animated animate__lightSpeedInRight'>
-            <p>Master Cubication:
-            El cubicador de materiales Master Cubication es una herramienta pensada para ayudar de manera significativa a realizar cálculos de los materiales asociados a su proyecto de construcción de una forma rápida y sencilla, esta cuenta con información técnica y toma en cuenta todos los elementos necesarios para la construcción de mayor a menor escala, realizando así los cálculos de los materiales en cualquier parte que se esté. Dicha herramienta es adecuada para profesionales, estudiantes, profesores, relacionado con el ambiente de la construcción.</p>
+            <p>Misión:</p>
+            <p>Facilitamos soluciones tecnológicas con enfoque de construcción, disminuyendo errores en la Planeación de proyectos, formulando presupuestos rápido, mejorando el déficit habitacional de los países, evitando pérdidas económicas y materiales en obras de construcción.
+             </p>
+             <p>Visión:</p>
+             <p>Posicionarnos como empresa líder de soluciones tecnológicas con enfocado en la construcción de urbanizadoras de los países, empresas del sector construcción y profesionales de la industria</p>
+
           </div>
+
           <div className='col-md-5 col-sm-12'>
             <center>
             <img className='img1' src={image1}/>
             </center>
           </div>
+
         </div>
         <div className='row'>
           <div className='col-md-5 col-sm-12 contcard'>

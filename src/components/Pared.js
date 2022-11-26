@@ -1,6 +1,6 @@
-import React, {useState} from 'react'
+import React, {Component, useState} from 'react'
 
-let a, b, area, auxi, porcetaje, result = 0;
+let a, b, area, auxi, porcetaje,mort =0,cem =0, agua = 0, arena = 0, result=0 ;
 // let materialBase;
 
 function CubicationPared(){
@@ -16,19 +16,24 @@ function CubicationPared(){
   //   default:
   //     break;
   // }
-  area = a*b;
+  area = parseInt((a*b)/0.019125);
   console.log(area);
   auxi = Math.ceil(area * 12);
   console.log(auxi);
   porcetaje = (auxi * 5 / 100);
   console.log(porcetaje);
   result = Math.ceil(auxi + porcetaje);
+  mort = (a*b*0.12)-(area*0.24*0.06*0.12);
+  cem = parseInt((302*mort)*1.05);
+  arena =parseFloat(1.2*mort+0.5);
+  agua = parseInt (240*mort)
 }
 
 export default function Pared() {
   const [materialB, setMaterialB] = useState('');
   const [altura, setAltura] = useState(0);
   const [ancho, setAncho] = useState(0);
+  const [Mort, setMort] = useState(0);
   // materialBase = materialB;
   a = altura;
   b = ancho;
@@ -73,27 +78,27 @@ export default function Pared() {
           <div className='col-md-2 col-sm-6'>
             <h5>Material Base:</h5>
             <p>{materialB}</p>
-            <p>12 C$</p>
+            <p></p>
           </div>
           <div className='col-md-2 col-sm-6'>
             <h5>Cantidad</h5>
-            <p>{result}</p>
-            <p>12 C$</p>
+            <p>{area} Unid</p>
+            <p></p>
           </div>
           <div className='col-md-2 col-sm-6'>
             <h5>Cemento:</h5>
-            <p>50g</p>
-            <p>12 C$</p>
+            <p>{cem} Kg</p>
+            <p></p>
           </div>
           <div className='col-md-2 col-sm-6'>
             <h5>Arena:</h5>
-            <p>234kg</p>
-            <p>12 C$</p>
+            <p>{arena}M3</p>
+            <p></p>
           </div>
           <div className='col-md-2 col-sm-6'>
             <h5>Agua:</h5>
-            <p>234ltr</p>
-            <p>12 C$</p>
+            <p>{agua}ltr</p>
+            <p></p>
           </div>
           </div>
       </div>

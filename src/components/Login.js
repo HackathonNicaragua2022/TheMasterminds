@@ -1,6 +1,21 @@
 import React, { Component } from 'react'
+import axios from 'axios';
 
 export default class login extends Component {
+    state = {
+        user: []
+      }
+      
+      
+    
+    componentDidMount() {
+        axios.get(`http://localhost:4000/api/Usuarios`)
+          .then(res => {
+            const user = res.data;
+            this.setState({ user });
+            console.log(user);
+          })
+      }
   render() {
     return (
       <div>
